@@ -1,0 +1,9 @@
+<textarea
+  #bioInput
+  [value]="bio"
+  (input)="onBioChange(bioInput.value)"
+  rows="1"
+  style="overflow:hidden; resize:none; width:100%;"></textarea><br>
+
+<button class="save-button" (click)="saveBio()">Save</button>
+

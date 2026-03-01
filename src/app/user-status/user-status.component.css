@@ -1,0 +1,35 @@
+.status-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.status-text {
+  font-weight: 600;
+}
+
+.online .status-text {
+  color: #28a745; /* green */
+}
+
+.offline .status-text {
+  color: #dc3545; /* red */
+}
+
+.status-container button {
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.status-container button:hover {
+  background-color: #0056b3;
+}

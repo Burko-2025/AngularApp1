@@ -1,0 +1,13 @@
+<div class="user-card">
+  <h1>User Profile</h1>
+
+
+  <div class="user-info">
+    <h2 class="user-name">{{ user.name }}</h2>
+    <p class="user-age">Age: {{ user.age }}</p>
+    <img [src]="user.picture" alt="{{user.name}}" class="user-picture" />
+
+    <app-user-bio [(bio)]="user.about"></app-user-bio>
+    <app-user-status [(online)]="user.online"></app-user-status>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<div class="status-container" [ngClass]="online ? 'online' : 'offline'">
+  <span class="status-text">{{ online ? 'Online' : 'Offline' }}</span>
+  <button (click)="toggleStatus()">Toggle</button>
+</div>
