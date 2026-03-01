@@ -1,9 +1,33 @@
+<!-- ========================= -->
+<!-- User Bio Textarea Section -->
+<!-- ========================= -->
+
+<!-- 
+  Textarea for editing the user's bio.
+  It auto-resizes as the user types.
+-->
 <textarea
   #bioInput
   [value]="bio"
   (input)="onBioChange(bioInput.value)"
   rows="1"
-  style="overflow:hidden; resize:none; width:100%;"></textarea><br>
+  style="overflow: hidden; resize: none; width: 100%;">
+</textarea>
 
-<button class="save-button" (click)="saveBio()">Save</button>
+<!-- Small spacing between textarea and button -->
+<br>
 
+<!-- ========================= -->
+<!-- Save Button Section -->
+<!-- ========================= -->
+
+<!-- 
+  Save button:
+  - Uses the .save-button CSS class for styling
+  - Calls saveBio() when clicked
+-->
+<button
+  class="save-button"
+  (click)="saveBio()">
+  Save
+</button>

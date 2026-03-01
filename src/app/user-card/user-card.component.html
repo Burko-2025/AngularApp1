@@ -1,13 +1,62 @@
+<!-- ========================= -->
+<!-- User Card Container -->
+<!-- ========================= -->
+
+<!-- 
+  Main card wrapper.
+  Styled using the .user-card CSS class.
+-->
 <div class="user-card">
+
+  <!-- Page / Card Title -->
   <h1>User Profile</h1>
 
+  <!-- ========================= -->
+  <!-- User Information Section -->
+  <!-- ========================= -->
 
+  <!-- 
+    Container for all user-related information.
+    Centers and styles content inside the card.
+  -->
   <div class="user-info">
-    <h2 class="user-name">{{ user.name }}</h2>
-    <p class="user-age">Age: {{ user.age }}</p>
-    <img [src]="user.picture" alt="{{user.name}}" class="user-picture" />
 
+    <!-- Displays the user's name using Angular interpolation -->
+    <h2 class="user-name">{{ user.name }}</h2>
+
+    <!-- Displays the user's age -->
+    <p class="user-age">
+      Age: {{ user.age }}
+    </p>
+
+    <!-- 
+      Displays the user's profile picture.
+      [src] is property binding.
+      alt text is dynamically set for accessibility.
+    -->
+    <img
+      [src]="user.picture"
+      [alt]="user.name"
+      class="user-picture" />
+
+    <!-- ========================= -->
+    <!-- Child Components -->
+    <!-- ========================= -->
+
+    <!-- 
+      Bio component:
+      Two-way binding using [(bio)].
+      - Passes user.about down to the child
+      - Updates parent when bio changes
+    -->
     <app-user-bio [(bio)]="user.about"></app-user-bio>
+
+    <!-- 
+      Status component:
+      Two-way binding for online status.
+      Syncs user.online between parent and child.
+    -->
     <app-user-status [(online)]="user.online"></app-user-status>
+
   </div>
 </div>

@@ -1,4 +1,38 @@
-<div class="status-container" [ngClass]="online ? 'online' : 'offline'">
-  <span class="status-text">{{ online ? 'Online' : 'Offline' }}</span>
-  <button (click)="toggleStatus()">Toggle</button>
+<!-- ========================= -->
+<!-- User Status Container -->
+<!-- ========================= -->
+
+<!-- 
+  Main wrapper for the user's status.
+  
+  [ngClass] dynamically applies a CSS class:
+  - If online is true  → class "online" is applied
+  - If online is false → class "offline" is applied
+  
+  This allows you to style the status differently (e.g., green vs red).
+-->
+<div 
+  class="status-container"
+  [ngClass]="online ? 'online' : 'offline'">
+
+  <!-- 
+    Displays text based on the user's online state.
+    
+    Uses Angular's ternary operator:
+    - If online is true  → shows "Online"
+    - If online is false → shows "Offline"
+  -->
+  <span class="status-text">
+    {{ online ? 'Online' : 'Offline' }}
+  </span>
+
+  <!-- 
+    Toggle button:
+    - Calls toggleStatus() when clicked
+    - Typically switches online between true and false
+  -->
+  <button (click)="toggleStatus()">
+    Toggle
+  </button>
+
 </div>
